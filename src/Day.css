@@ -1,0 +1,32 @@
+.day {
+    width: 14%;
+    background-color:rgb(246, 231, 250);
+    border-radius: 0.5em;
+    margin: 0.2em;
+    padding: 0.5em;
+}
+
+.today {
+    background-color:rgb(187, 137, 234);
+    color: white;
+}
+
+.dayChart {
+    width: 1.3em;
+    height: 1.3em;
+    border-radius: 50%;
+    background-color:rgb(135, 86, 181);
+    text-align: center;
+}
+
+.dayTitle {
+    font-size: 0.8em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.date {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+}
