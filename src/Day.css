@@ -1,22 +1,18 @@
 .day {
     width: 14%;
-    background-color:rgb(246, 231, 250);
-    border-radius: 0.5em;
+    background-color:#f7e9fb;
+    border-radius: 0.8em;
     margin: 0.2em;
-    padding: 0.5em;
+    padding: 0.8em 0.5em;
+}
+
+.future {
+    background-color:rgb(227, 227, 227);
 }
 
 .today {
-    background-color:rgb(187, 137, 234);
+    background-color:rgb(119, 91, 145);
     color: white;
-}
-
-.dayChart {
-    width: 1.3em;
-    height: 1.3em;
-    border-radius: 50%;
-    background-color:rgb(135, 86, 181);
-    text-align: center;
 }
 
 .dayTitle {

@@ -1,5 +1,4 @@
 import { FC } from "react";
-import "react-calendar/dist/Calendar.css";
 import { DAY_IN_MS } from "./calendar";
 import Day from "./Day";
 import "./Week.css";
@@ -14,7 +13,7 @@ const Week: FC = () => {
   return (
     <div className="week">
       {weekdays.map(({ i, day }) => (
-        <Day day={day} isToday={i === 0} />
+        <Day day={day} isToday={i === 0} isFuture={i > 0} />
       ))}
     </div>
   );
