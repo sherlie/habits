@@ -1,4 +1,5 @@
 import { FC } from "react";
+import "./TaskList.css";
 
 /* TODO: remove mock data */
 const mockTasks = [
