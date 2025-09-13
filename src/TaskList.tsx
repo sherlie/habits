@@ -11,6 +11,7 @@ const mockTasks = [
 const TaskList: FC = () => {
   return (
     <div>
+      <h2>To Do</h2>
       {mockTasks.map(({ id, name }) => (
         <div key={id} className="task">
           {name}

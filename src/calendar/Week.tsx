@@ -13,7 +13,7 @@ const Week: FC = () => {
   return (
     <div className="week">
       {weekdays.map(({ i, day }) => (
-        <Day day={day} isToday={i === 0} isFuture={i > 0} />
+        <Day key={i} day={day} isToday={i === 0} isFuture={i > 0} />
       ))}
     </div>
   );
