@@ -1,9 +1,18 @@
 import { FC } from 'react';
 
-const NewHabit: FC = () => {
+interface NewHabitProps {
+  switchHome: () => void;
+} 
+
+const NewHabit: FC<NewHabitProps> = ({ switchHome }) => {
   return (
     <div>
-        add new habit
+        <div>
+          add new habit page
+        </div>
+        <button onClick={switchHome}>
+          Back
+        </button>
     </div>
   );
 };

@@ -1,31 +1,26 @@
 import { FC, useState } from "react";
-import Week from "./calendar/Week";
-import TaskList from "./TaskList";
 import NewHabit from './NewHabit';
 import { Page } from './pages';
+import HomePage from "./HomePage";
 
 const App: FC = () => {
-  function handleOnClick() {
-    setPage(Page.AddHabit);
+  const [page, setPage] = useState(Page.Home);
+
+  const switchHome = () => {
+    setPage(Page.Home);
   }
 
-  const [page, setPage] = useState(Page.Home);
+  const switchAddHabit = () => {
+    setPage(Page.AddHabit);
+  }
 
   return (
     <>
       {page === Page.Home &&
-        <>
-          <Week />
-          <TaskList />
-          <button
-            onClick={handleOnClick}
-          >
-            Add new habit
-          </button>
-        </>
+        <HomePage switchAddHabit={switchAddHabit} />
       }
       {page === Page.AddHabit &&
-        <NewHabit />
+        <NewHabit switchHome={switchHome}/>
       }
     </>
   );
