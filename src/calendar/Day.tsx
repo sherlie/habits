@@ -1,6 +1,7 @@
 import { FC } from "react";
+import clsx from "clsx";
 import { WEEKDAY_NAMES } from "./calendar";
-import "./Day.css";
+import { dayStyle, dayState, dayTitle, date } from './Day.css.ts';
 
 interface DayProps {
   day: Date;
@@ -12,12 +13,14 @@ const Day: FC<DayProps> = ({ day, isToday, isFuture }) => {
   const weekday = WEEKDAY_NAMES[day.getDay()];
   return (
     <div
-      className={
-        "day" + (isToday ? " today" : "") + (isFuture ? " future" : "")
-      }
+      className={clsx(
+        dayStyle,
+        isToday && dayState.today,
+        isFuture && dayState.future
+      )}
     >
-      <div className="dayTitle">{weekday}</div>
-      <div className="date">{day.getDate()}</div>
+      <div className={dayTitle}>{weekday}</div>
+      <div className={date}>{day.getDate()}</div>
     </div>
   );
 };

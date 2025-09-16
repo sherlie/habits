@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { DAY_IN_MS } from "./calendar";
 import Day from "./Day";
-import "./Week.css";
+import { week } from './Week.css.ts';
 
 const Week: FC = () => {
   const weekdays = [];
@@ -11,7 +11,7 @@ const Week: FC = () => {
   }
 
   return (
-    <div className="week">
+    <div className={week}>
       {weekdays.map(({ i, day }) => (
         <Day key={i} day={day} isToday={i === 0} isFuture={i > 0} />
       ))}
