@@ -1,5 +1,5 @@
 import { FC } from "react";
-import "./TaskList.css";
+import { task } from './TaskList.css.ts';
 
 /* TODO: remove mock data */
 const mockTasks = [
@@ -13,7 +13,7 @@ const TaskList: FC = () => {
     <div>
       <h2>To Do</h2>
       {mockTasks.map(({ id, name }) => (
-        <div key={id} className="task">
+        <div key={id} className={task}>
           {name}
         </div>
       ))}
