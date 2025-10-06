@@ -1,27 +1,19 @@
 import { FC, useState } from "react";
-import NewHabit from './NewHabit';
-import { Page } from './pages';
+import NewHabit from "./NewHabit";
+import { Page } from "./pages";
 import HomePage from "./HomePage";
+import { BrowserRouter, Routes, Route } from "react-router";
 
 const App: FC = () => {
-  const [page, setPage] = useState(Page.Home);
-
-  const switchHome = () => {
-    setPage(Page.Home);
-  }
-
-  const switchAddHabit = () => {
-    setPage(Page.AddHabit);
-  }
 
   return (
     <>
-      {page === Page.Home &&
-        <HomePage switchAddHabit={switchAddHabit} />
-      }
-      {page === Page.AddHabit &&
-        <NewHabit switchHome={switchHome}/>
-      }
+      <BrowserRouter>
+        <Routes>
+          <Route path="/addhabit" element={<NewHabit />} />
+          <Route path="/" element={<HomePage />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 };

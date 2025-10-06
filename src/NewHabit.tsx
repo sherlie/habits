@@ -1,16 +1,15 @@
 import { FC } from 'react';
+import { useNavigate } from 'react-router';
 
-interface NewHabitProps {
-  switchHome: () => void;
-} 
+const NewHabit: FC = () => {
+  const navigate = useNavigate();
 
-const NewHabit: FC<NewHabitProps> = ({ switchHome }) => {
   return (
     <div>
         <div>
           add new habit page
         </div>
-        <button onClick={switchHome}>
+        <button onClick={() => navigate("/")}>
           Back
         </button>
     </div>

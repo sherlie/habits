@@ -1,18 +1,17 @@
 import { FC } from 'react';
 import Week from './calendar/Week';
 import TaskList from './TaskList';
+import { useNavigate } from 'react-router';
 
-interface NewHabitProps {
-  switchAddHabit: () => void;
-} 
+const HomePage: FC = () => {
+  const navigate = useNavigate();
 
-const HomePage: FC<NewHabitProps> = ({ switchAddHabit }) => {
   return (
     <>
       <Week />
       <TaskList />
       <button
-        onClick={switchAddHabit}
+        onClick={() => navigate("/addhabit")}
       >
         Add new habit
       </button>
