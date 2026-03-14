@@ -6,9 +6,9 @@ const NewHabit: FC = () => {
 
   return (
     <div>
-        <div>
+        <h3>
           add new habit page
-        </div>
+        </h3>
         <button onClick={() => navigate("/")}>
           Back
         </button>

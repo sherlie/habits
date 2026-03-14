@@ -1,7 +1,6 @@
-import { FC, useState } from "react";
-import NewHabit from "./NewHabit";
-import { Page } from "./pages";
-import HomePage from "./HomePage";
+import { FC } from "react";
+import NewHabit from "../pages/NewHabit";
+import HomePage from "../pages/HomePage";
 import { BrowserRouter, Routes, Route } from "react-router";
 
 const App: FC = () => {
