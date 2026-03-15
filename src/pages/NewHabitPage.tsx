@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { useNavigate } from 'react-router';
 
-const NewHabit: FC = () => {
+const NewHabitPage: FC = () => {
   const navigate = useNavigate();
 
   return (
@@ -16,4 +16,4 @@ const NewHabit: FC = () => {
   );
 };
 
-export default NewHabit;
+export default NewHabitPage;

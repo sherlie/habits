@@ -1,7 +1,8 @@
 import { FC } from "react";
-import NewHabit from "../pages/NewHabit";
+import NewHabitPage from "../pages/NewHabitPage";
 import HomePage from "../pages/HomePage";
 import { BrowserRouter, Routes, Route } from "react-router";
+import Navbar from "../entities/nav/Navbar";
 
 const App: FC = () => {
 
@@ -9,9 +10,10 @@ const App: FC = () => {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/addhabit" element={<NewHabit />} />
+          <Route path="/addhabit" element={<NewHabitPage />} />
           <Route path="/" element={<HomePage />} />
         </Routes>
+      <Navbar />
       </BrowserRouter>
     </>
   );
